@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reino Acuático La 56 | Peces, Acuarios y Mantenimiento</title>
+  <meta name="description" content="Peces ornamentales, acuarios personalizados, mantenimiento y asesoría profesional en Itagüí. Contáctanos por WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind config (opcional para colores de marca)
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Urbanist', 'ui-sans-serif', 'system-ui'] },
+          colors: {
+            brand: {
+              50: '#eef7fb', 100: '#d6ebf6', 200: '#b4d9ee', 300: '#87c2e4',
+              400: '#5aa7d8', 500: '#2f8dc9', 600: '#1e71ad', 700: '#195b8c',
+              800: '#164b73', 900: '#133f60'
+            },
+            aqua: '#1fd0b6'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255,255,255,.1); }
+    
+    /* Estilos del carousel */
+    .carousel-container {
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+    
+    .carousel-slide {
+      flex-shrink: 0;
+      width: 100%;
+    }
+    
+    /* Responsive del carousel */
+    @media (min-width: 640px) {
+      .carousel-slide {
+        width: 50%; /* 2 slides en tablet */
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .carousel-slide {
+        width: 33.333333%; /* 3 slides en desktop */
+      }
+    }
+    
+    /* Indicadores del carousel */
+    .carousel-dot.active {
+      background-color: #1fd0b6 !important;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-brand-900 via-brand-800 to-brand-900 text-white">
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <nav class="mt-4 flex items-center justify-between rounded-2xl glass border border-white/10 px-3 sm:px-4 py-3 shadow-lg">
+        <a href="#inicio" class="flex items-center gap-2 sm:gap-3">
+          <img src="images/logo.png" alt="Reino Acuático La 56" class="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 object-cover" />
+          <span class="font-extrabold tracking-tight text-sm sm:text-base lg:text-lg">Reino Acuático La 56</span>
+        </a>
+        <div class="hidden md:flex items-center gap-4 lg:gap-6 text-white/90 text-sm lg:text-base">
+          <a href="#servicios" class="hover:text-white transition-colors">Servicios</a>
+          <a href="#catalogo" class="hover:text-white transition-colors">Peces & Acuarios</a>
+          <a href="#testimonios" class="hover:text-white transition-colors">Testimonios</a>
+          <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+                     <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20acuarios%20y%20peces" target="_blank" class="ml-2 inline-flex items-center gap-2 rounded-xl bg-aqua px-3 sm:px-4 py-2 font-semibold text-brand-900 shadow hover:scale-[1.02] transition text-sm">
+            <span>WhatsApp</span>
+          </a>
+        </div>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-xl border border-white/20 p-2 hover:bg-white/10 transition-colors" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </nav>
+      <div id="mobileMenu" class="md:hidden hidden mt-2 rounded-2xl glass border border-white/10 px-4 py-3">
+        <div class="grid gap-3">
+          <a href="#servicios" class="block py-2 border-b border-white/10 hover:text-aqua transition-colors">Servicios</a>
+          <a href="#catalogo" class="block py-2 border-b border-white/10 hover:text-aqua transition-colors">Peces & Acuarios</a>
+          <a href="#testimonios" class="block py-2 border-b border-white/10 hover:text-aqua transition-colors">Testimonios</a>
+          <a href="#contacto" class="block py-2 hover:text-aqua transition-colors">Contacto</a>
+                     <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-xl bg-aqua px-4 py-2 font-semibold text-brand-900 shadow mt-2">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="pt-24 sm:pt-28 md:pt-32 lg:pt-40 pb-12 sm:pb-16 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1516009081650-4003ceb4c4d1?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center"></div>
+    <div class="relative mx-auto max-w-7xl px-4 sm:px-6 grid items-center gap-8 sm:gap-10 md:grid-cols-2">
+      <div class="text-center md:text-left">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">Peces, Acuarios y <span class="text-aqua">asesoría profesional</span></h1>
+        <p class="mt-4 sm:mt-6 text-white/80 text-base sm:text-lg max-w-2xl mx-auto md:mx-0">Creamos mundos acuáticos únicos para hogares y negocios en Itagüí. Diseño, instalación y mantenimiento con expertos.</p>
+        <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
+          <a href="#catalogo" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-aqua px-4 sm:px-6 py-3 font-semibold text-brand-900 shadow hover:translate-y-[-1px] transition text-sm sm:text-base">Explorar catálogo</a>
+          <a href="https://www.instagram.com/reino_acuatico_la56" target="_blank" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-white/10 px-4 sm:px-6 py-3 font-semibold border border-white/20 hover:bg-white/15 text-sm sm:text-base">Instagram</a>
+        </div>
+        <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-white/70 text-sm sm:text-base justify-center md:justify-start">
+          <div class="flex items-center gap-2"><span class="text-aqua">★ ★ ★ ★ ★</span><span class="hidden sm:inline">Clientes felices</span><span class="sm:hidden">5 estrellas</span></div>
+          <div class="text-center sm:text-left">Itagüí • Calle 56 #50-50</div>
+        </div>
+      </div>
+      <div class="relative order-first md:order-last">
+        <div class="aspect-video overflow-hidden rounded-2xl sm:rounded-3xl border border-white/10 shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1519677100203-a0e668c92439?q=80&w=1600&auto=format&fit=crop" alt="Acuario" class="h-full w-full object-cover"/>
+        </div>
+        <div class="absolute -bottom-4 sm:-bottom-6 -left-4 sm:-left-6 hidden sm:block rounded-2xl bg-white/10 px-3 sm:px-4 py-2 sm:py-3 border border-white/20 backdrop-blur">
+          <p class="text-xs sm:text-sm">Mantenimiento premium cada 30 días</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="py-16 sm:py-20 bg-brand-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="mb-8 sm:mb-10 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center sm:text-left">Servicios</h2>
+                 <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20agendar%20un%20servicio" target="_blank" class="hidden md:inline-flex rounded-xl bg-aqua px-5 py-2 font-semibold text-brand-900 hover:scale-105 transition-transform">Agendar por WhatsApp</a>
+      </div>
+      <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 hover:bg-white/10 transition-colors">
+          <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-aqua/20 flex items-center justify-center mb-3 sm:mb-4 text-lg sm:text-xl">🐠</div>
+          <h3 class="text-lg sm:text-xl font-bold mb-2">Venta de peces ornamentales</h3>
+          <p class="text-white/80 text-sm sm:text-base">Asesoría para elegir especies compatibles y saludables según tu acuario.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 hover:bg-white/10 transition-colors">
+          <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-aqua/20 flex items-center justify-center mb-3 sm:mb-4 text-lg sm:text-xl">🏝️</div>
+          <h3 class="text-lg sm:text-xl font-bold mb-2">Diseño e instalación de acuarios</h3>
+          <p class="text-white/80 text-sm sm:text-base">Proyectos llave en mano para hogares, oficinas y comercios. Plantados y decorativos.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 hover:bg-white/10 transition-colors sm:col-span-2 lg:col-span-1">
+          <div class="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-aqua/20 flex items-center justify-center mb-3 sm:mb-4 text-lg sm:text-xl">⚙️</div>
+          <h3 class="text-lg sm:text-xl font-bold mb-2">Mantenimiento y asesoría</h3>
+          <p class="text-white/80 text-sm sm:text-base">Planes mensuales de limpieza, control de parámetros y bienestar de tus peces.</p>
+        </article>
+      </div>
+      <div class="mt-6 sm:mt-8 md:hidden">
+                 <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20agendar%20un%20servicio" target="_blank" class="inline-flex rounded-xl bg-aqua px-5 py-3 font-semibold text-brand-900 w-full justify-center hover:scale-105 transition-transform">Agendar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo / Galería -->
+  <section id="catalogo" class="py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="mb-8 sm:mb-10 text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold">Peces & Acuarios</h2>
+        <p class="text-white/80 mt-2 text-sm sm:text-base">Algunas piezas y proyectos recientes. Escríbenos para catálogo actualizado.</p>
+      </div>
+      
+      <!-- Carousel Container -->
+      <div class="carousel-container relative">
+        <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="carouselTrack">
+          <figure class="carousel-slide group overflow-hidden rounded-2xl border border-white/10 bg-white/5 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <img class="h-48 sm:h-56 w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1546500840-ae38253aba9b?q=80&w=1600&auto=format&fit=crop" alt="Pez Betta" />
+            <figcaption class="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+              <div class="text-center sm:text-left">
+                <p class="font-semibold text-sm sm:text-base">Betta Halfmoon</p>
+                <p class="text-xs sm:text-sm text-white/70">Colores premium</p>
+              </div>
+                             <a href="https://wa.me/573148311888?text=Hola%2C%20me%20interesa%20el%20Betta%20Halfmoon" target="_blank" class="rounded-lg bg-aqua px-3 py-2 text-brand-900 font-semibold text-sm hover:scale-105 transition-transform">Consultar</a>
+            </figcaption>
+          </figure>
+          
+          <figure class="carousel-slide group overflow-hidden rounded-2xl border border-white/10 bg-white/5 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <img class="h-48 sm:h-56 w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1524704654690-b56c05c78a00?q=80&w=1600&auto=format&fit=crop" alt="Acuario plantado" />
+            <figcaption class="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+              <div class="text-center sm:text-left">
+                <p class="font-semibold text-sm sm:text-base">Acuario plantado 120L</p>
+                <p class="text-xs sm:text-sm text-white/70">Diseño a medida</p>
+              </div>
+                             <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20cotizar%20un%20acuario%20plantado%20120L" target="_blank" class="rounded-lg bg-aqua px-3 py-2 text-brand-900 font-semibold text-sm hover:scale-105 transition-transform">Cotizar</a>
+            </figcaption>
+          </figure>
+          
+          <figure class="carousel-slide group overflow-hidden rounded-2xl border border-white/10 bg-white/5 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <img class="h-48 sm:h-56 w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1452570053594-1b985d6ea890?q=80&w=1600&auto=format&fit=crop" alt="Cardumen" />
+            <figcaption class="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+              <div class="text-center sm:text-left">
+                <p class="font-semibold text-sm sm:text-base">Tetra neón (pack)</p>
+                <p class="text-xs sm:text-sm text-white/70">Ideal principiantes</p>
+              </div>
+                             <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20el%20pack%20de%20Tetra%20ne%C3%B3n" target="_blank" class="rounded-lg bg-aqua px-3 py-2 text-brand-900 font-semibold text-sm hover:scale-105 transition-transform">Apartar</a>
+            </figcaption>
+          </figure>
+          
+          <!-- Slides adicionales para el carousel -->
+          <figure class="carousel-slide group overflow-hidden rounded-2xl border border-white/10 bg-white/5 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <img class="h-48 sm:h-56 w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1516009081650-4003ceb4c4d1?q=80&w=1600&auto=format&fit=crop" alt="Acuario marino" />
+            <figcaption class="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+              <div class="text-center sm:text-left">
+                <p class="font-semibold text-sm sm:text-base">Acuario marino 200L</p>
+                <p class="text-xs sm:text-sm text-white/70">Ecosistema completo</p>
+              </div>
+                             <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20cotizar%20un%20acuario%20marino%20200L" target="_blank" class="rounded-lg bg-aqua px-3 py-2 text-brand-900 font-semibold text-sm hover:scale-105 transition-transform">Cotizar</a>
+            </figcaption>
+          </figure>
+          
+          <figure class="carousel-slide group overflow-hidden rounded-2xl border border-white/10 bg-white/5 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <img class="h-48 sm:h-56 w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&w=1600&auto=format&fit=crop" alt="Guppy" />
+            <figcaption class="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+              <div class="text-center sm:text-left">
+                <p class="font-semibold text-sm sm:text-base">Guppy Endler</p>
+                <p class="text-xs sm:text-sm text-white/70">Colores vibrantes</p>
+              </div>
+                             <a href="https://wa.me/573148311888?text=Hola%2C%20me%20interesa%20el%20Guppy%20Endler" target="_blank" class="rounded-lg bg-aqua px-3 py-2 text-brand-900 font-semibold text-sm hover:scale-105 transition-transform">Consultar</a>
+            </figcaption>
+          </figure>
+          
+          <figure class="carousel-slide group overflow-hidden rounded-2xl border border-white/10 bg-white/5 flex-shrink-0 w-full sm:w-1/2 lg:w-1/3">
+            <img class="h-48 sm:h-56 w-full object-cover transition group-hover:scale-105" src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1600&auto=format&fit=crop" alt="Acuario nano" />
+            <figcaption class="p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-0">
+              <div class="text-center sm:text-left">
+                <p class="font-semibold text-sm sm:text-base">Acuario nano 30L</p>
+                <p class="text-xs sm:text-sm text-white/70">Perfecto para escritorio</p>
+              </div>
+                             <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20cotizar%20un%20acuario%20nano%2030L" target="_blank" class="rounded-lg bg-aqua px-3 py-2 text-brand-900 font-semibold text-sm hover:scale-105 transition-transform">Cotizar</a>
+            </figcaption>
+          </figure>
+        </div>
+        
+        <!-- Navegación del carousel -->
+        <button class="carousel-nav carousel-prev absolute left-2 sm:left-0 top-1/2 transform -translate-y-1/2 -translate-x-2 sm:-translate-x-4 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 sm:p-3 backdrop-blur-sm border border-white/20 transition-all duration-300 z-10 hover:scale-110" onclick="moveCarousel(-1)">
+          <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+        
+        <button class="carousel-nav carousel-next absolute right-2 sm:right-0 top-1/2 transform -translate-y-1/2 translate-x-2 sm:translate-x-4 bg-white/20 hover:bg-white/30 text-white rounded-full p-2 sm:p-3 backdrop-blur-sm border border-white/20 transition-all duration-300 z-10 hover:scale-110" onclick="moveCarousel(1)">
+          <svg class="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        
+        <!-- Indicadores del carousel -->
+        <div class="carousel-indicators flex justify-center mt-4 sm:mt-6 gap-1.5 sm:gap-2">
+                     <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/30 hover:bg-white/50 transition-colors duration-300" onclick="goToSlide(0)"></button>
+                     <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/30 hover:bg-white/50 transition-colors duration-300" onclick="goToSlide(1)"></button>
+                     <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/30 hover:bg-white/50 transition-colors duration-300" onclick="goToSlide(2)"></button>
+                     <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/30 hover:bg-white/50 transition-colors duration-300" onclick="goToSlide(3)"></button>
+                     <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/30 hover:bg-white/50 transition-colors duration-300" onclick="goToSlide(4)"></button>
+                     <button class="carousel-dot w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-white/30 hover:bg-white/50 transition-colors duration-300" onclick="goToSlide(5)"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="py-16 sm:py-20 bg-brand-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-8 sm:mb-10 text-center">Lo que dicen nuestros clientes</h2>
+      <div class="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 hover:bg-white/10 transition-colors">
+          <p class="text-white/90 text-sm sm:text-base">"El acuario quedó espectacular. Se nota el profesionalismo y la pasión."</p>
+          <p class="mt-3 text-xs sm:text-sm text-white/60">— Camila R.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 hover:bg-white/10 transition-colors">
+          <p class="text-white/90 text-sm sm:text-base">"Me ayudaron a elegir peces compatibles. Mi acuario está estable y hermoso."</p>
+          <p class="mt-3 text-xs sm:text-sm text-white/60">— Andrés G.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 hover:bg-white/10 transition-colors sm:col-span-2 lg:col-span-1">
+          <p class="text-white/90 text-sm sm:text-base">"El mantenimiento mensual me ahorra tiempo. 100% recomendados."</p>
+          <p class="mt-3 text-xs sm:text-sm text-white/60">— Paola L.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="py-16 sm:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <div class="grid gap-8 sm:gap-10 grid-cols-1 lg:grid-cols-2 items-start">
+        <div class="text-center lg:text-left">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold">Contáctanos</h2>
+          <p class="mt-3 text-white/80 text-sm sm:text-base">Itagüí – Calle 56 #50-50 • Lunes a sábado 10:00–19:00</p>
+          <div class="mt-6 sm:mt-8 grid gap-3 grid-cols-1 sm:grid-cols-2">
+                         <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20acuarios" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-aqua px-4 sm:px-6 py-3 font-semibold text-brand-900 shadow hover:scale-105 transition-transform text-sm sm:text-base">Escribir por WhatsApp</a>
+            <a href="https://maps.google.com/?q=Itag%C3%BC%C3%AD%20Calle%2056%20%2350-50" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-white/10 px-4 sm:px-6 py-3 font-semibold border border-white/20 hover:bg-white/15 transition-colors text-sm sm:text-base">Ver en Google Maps</a>
+          </div>
+          <div class="mt-6 sm:mt-8">
+            <p class="text-xs sm:text-sm text-white/70">Correo: contacto@reinoacuatico56.com • Instagram: @reino_acuatico_la56</p>
+          </div>
+        </div>
+        <form class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-6 space-y-4" onsubmit="enviarWhatsApp(event)">
+          <div>
+            <label class="block text-sm mb-1">Nombre</label>
+            <input type="text" id="nombre" required class="w-full rounded-xl border border-white/20 bg-transparent px-3 sm:px-4 py-2 sm:py-3 outline-none focus:border-aqua transition-colors text-sm sm:text-base" placeholder="Tu nombre" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Email</label>
+            <input type="email" id="email" required class="w-full rounded-xl border border-white/20 bg-transparent px-3 sm:px-4 py-2 sm:py-3 outline-none focus:border-aqua transition-colors text-sm sm:text-base" placeholder="tunombre@email.com" />
+          </div>
+          <div>
+            <label class="block text-sm mb-1">Mensaje</label>
+            <textarea id="mensaje" rows="4" required class="w-full rounded-xl border border-white/20 bg-transparent px-3 sm:px-4 py-2 sm:py-3 outline-none focus:border-aqua transition-colors text-sm sm:text-base resize-none" placeholder="Cuéntanos qué necesitas"></textarea>
+          </div>
+          <button type="submit" class="w-full rounded-xl bg-aqua px-4 sm:px-6 py-3 font-semibold text-brand-900 hover:scale-105 transition-transform text-sm sm:text-base">Enviar por WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 sm:py-10 border-t border-white/10 bg-brand-900/60">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+      <p class="text-white/70 text-sm sm:text-base">© 2025 Reino Acuático La 56. Todos los derechos reservados.</p>
+      <img src="images/logo.png" alt="Reino Acuático La 56 logo" class="h-12 w-12 sm:h-16 sm:w-16 lg:h-20 lg:w-20 object-cover" />
+      <div class="flex items-center gap-3 sm:gap-4 text-white/80 text-sm sm:text-base">
+        <a href="https://www.instagram.com/reino_acuatico_la56" target="_blank" class="hover:text-aqua transition-colors">Instagram</a>
+        <a href="mailto:contacto@reinoacuatico56.com" class="hover:text-aqua transition-colors">Email</a>
+                 <a href="https://wa.me/573148311888" target="_blank" class="hover:text-aqua transition-colors">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <div class="whatsapp-float">
+         <a href="https://wa.me/573148311888?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20acuarios%20y%20peces" target="_blank" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+      <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+      </svg>
+      <span class="whatsapp-text">¡Hola! ¿En qué te ayudo?</span>
+      <div class="whatsapp-pulse"></div>
+    </a>
+  </div>
+
+  <style>
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+
+    .whatsapp-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #25d366, #128c7e);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      box-shadow: 0 8px 32px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 12px 40px rgba(37, 211, 102, 0.4);
+    }
+
+    .whatsapp-btn:active {
+      transform: translateY(-2px) scale(1.02);
+    }
+
+    .whatsapp-icon {
+      width: 20px;
+      height: 20px;
+      animation: iconBounce 2s ease-in-out infinite;
+    }
+
+    .whatsapp-text {
+      white-space: nowrap;
+      animation: textGlow 2s ease-in-out infinite alternate;
+    }
+
+    .whatsapp-pulse {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      background: rgba(37, 211, 102, 0.3);
+      animation: pulse 2s ease-in-out infinite;
+      z-index: -1;
+    }
+
+    /* Keyframes para las animaciones */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes iconBounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes textGlow {
+      0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      }
+      100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    /* Animación de entrada */
+    .whatsapp-float {
+      animation: slideIn 0.8s ease-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Responsive */
+    @media (min-width: 640px) {
+      .whatsapp-float {
+        bottom: 30px;
+        right: 30px;
+      }
+      
+      .whatsapp-btn {
+        padding: 16px 20px;
+        font-size: 14px;
+        gap: 12px;
+      }
+      
+      .whatsapp-icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+      }
+      
+      .whatsapp-btn {
+        padding: 10px 14px;
+        font-size: 12px;
+        gap: 6px;
+      }
+      
+      .whatsapp-icon {
+        width: 18px;
+        height: 18px;
+      }
+      
+      .whatsapp-text {
+        display: none;
+      }
+    }
+
+    /* Efecto de brillo al hover */
+    .whatsapp-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .whatsapp-btn:hover::before {
+      left: 100%;
+    }
+
+    /* Mejoras de accesibilidad */
+    @media (prefers-reduced-motion: reduce) {
+      .whatsapp-btn,
+      .whatsapp-icon,
+      .whatsapp-text,
+      .whatsapp-pulse {
+        animation: none;
+      }
+    }
+  </style>
+
+  <script>
+    // Menú móvil
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+
+    // Animación adicional para el botón de WhatsApp
+    const whatsappBtn = document.querySelector('.whatsapp-btn');
+    
+    whatsappBtn?.addEventListener('mouseenter', function() {
+      this.style.animationPlayState = 'paused';
+    });
+    
+    whatsappBtn?.addEventListener('mouseleave', function() {
+      this.style.animationPlayState = 'running';
+    });
+
+    // Carousel functionality
+    let currentSlide = 0;
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const totalSlides = slides.length;
+    
+    // Función para mover el carousel
+    function moveCarousel(direction) {
+      currentSlide += direction;
+      
+      // Loop infinito
+      if (currentSlide >= totalSlides) currentSlide = 0;
+      if (currentSlide < 0) currentSlide = totalSlides - 1;
+      
+      updateCarousel();
+    }
+    
+    // Función para ir a un slide específico
+    function goToSlide(slideIndex) {
+      currentSlide = slideIndex;
+      updateCarousel();
+    }
+    
+    // Función para actualizar el carousel
+    function updateCarousel() {
+      let slidesPerView;
+      let slideWidth;
+      
+      // Determinar cuántos slides mostrar según el tamaño de pantalla
+      if (window.innerWidth >= 1024) {
+        slidesPerView = 3; // Desktop
+      } else if (window.innerWidth >= 640) {
+        slidesPerView = 2; // Tablet
+      } else {
+        slidesPerView = 1; // Móvil
+      }
+      
+      // Calcular el ancho de cada slide
+      slideWidth = 100 / slidesPerView;
+      
+      // Calcular la posición de desplazamiento
+      const translateX = -currentSlide * slideWidth;
+      
+      // Aplicar la transformación
+      track.style.transform = `translateX(${translateX}%)`;
+      
+      // Actualizar indicadores activos
+      dots.forEach((dot, index) => {
+        if (index === currentSlide) {
+          dot.classList.add('active');
+          dot.classList.remove('bg-white/30');
+        } else {
+          dot.classList.remove('active');
+          dot.classList.add('bg-white/30');
+        }
+      });
+    }
+    
+    // Auto-play del carousel
+    let autoPlayInterval;
+    
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(() => {
+        moveCarousel(1);
+      }, 5000); // Cambia cada 5 segundos
+    }
+    
+    function stopAutoPlay() {
+      clearInterval(autoPlayInterval);
+    }
+    
+    // Pausar auto-play al hacer hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    carouselContainer?.addEventListener('mouseenter', stopAutoPlay);
+    carouselContainer?.addEventListener('mouseleave', startAutoPlay);
+    
+    // Pausar auto-play en dispositivos táctiles
+    let touchStartY = 0;
+    carouselContainer?.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
+      stopAutoPlay();
+    }, { passive: true });
+    
+    carouselContainer?.addEventListener('touchend', () => {
+      setTimeout(startAutoPlay, 2000); // Reanudar después de 2 segundos
+    }, { passive: true });
+    
+    // Navegación con teclado
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        moveCarousel(-1);
+      } else if (e.key === 'ArrowRight') {
+        moveCarousel(1);
+      }
+    });
+    
+    // Inicializar carousel
+    document.addEventListener('DOMContentLoaded', function() {
+      updateCarousel();
+      startAutoPlay();
+    });
+    
+    // Responsive carousel
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        updateCarousel();
+      }, 250); // Debounce para mejor performance
+    });
+    
+    // Touch/swipe support para móviles
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carouselContainer?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    
+    carouselContainer?.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+    
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+      
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe izquierda - siguiente slide
+          moveCarousel(1);
+        } else {
+          // Swipe derecha - slide anterior
+          moveCarousel(-1);
+        }
+      }
+    }
+
+    // Función para enviar el formulario por WhatsApp
+    function enviarWhatsApp(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      const mensajeWhatsApp = `Hola%2C%20quiero%20informaci%C3%B3n%20de%20acuarios%20y%20peces%20%28${nombre}%2C%20${email}%29%2C%20y%20me%20interesa%20el%20acuario%20que%20ofrecen.%20%28${mensaje}%29`;
+             const url = `https://wa.me/573148311888?text=${mensajeWhatsApp}`;
+
+      window.open(url, '_blank');
+      event.target.reset(); // Limpiar el formulario
+    }
+  </script>
+</body>
+</html>
